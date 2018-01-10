@@ -18,6 +18,7 @@ from django.contrib import admin
 from rest_framework.urlpatterns import format_suffix_patterns
 from adduser import views
 urlpatterns = [
+	url(r'^$',include('adduser.urls')),
     url(r'^adduser/',include('adduser.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^get/', views.list.as_view())
