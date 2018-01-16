@@ -21,7 +21,8 @@ urlpatterns = [
 	url(r'^$',include('adduser.urls')),
     url(r'^adduser/',include('adduser.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^get/', views.list.as_view())
+    url(r'^get/', views.list.as_view()),
+    url(r'^getdetails/user=(?P<ud>[^/]+)',views.list2.as_view())
 
 ]
 urlpatterns=format_suffix_patterns(urlpatterns)
